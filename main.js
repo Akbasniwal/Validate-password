@@ -101,7 +101,7 @@ function isEmail(email) {
 // }
 function validatePassword(p) {
 	return /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})/.test(
-		email
+		p
 	);
 }
 
