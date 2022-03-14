@@ -75,29 +75,34 @@ function isEmail(email) {
 
 
 
-//password checker
+// //password checker
+// function validatePassword(p) {
+//         errors = [];
+//     if (p.length < 8) {
+//         errors.push("Your password must be at least 8 characters"); 
+//     }
+//     if (p.search(/[A-Z]/i) < 0) {
+//         errors.push("Your password must contain at least one letter.");
+//     }
+//     if (p.search(/[a-z]/i) < 0) {
+//         errors.push("Your password must contain at least one letter.");
+//     }
+//     if (p.search(/[0-9]/) < 0) {
+//         errors.push("Your password must contain at least one digit."); 
+//     }
+//     if(p.search(/[!@#$%^&*]/) < 0){
+//         errors.push("Your password must contain at least one special character."); 
+//     }
+//     if (errors.length > 20){
+//         alert(errors.join("\n"));
+//         return false;
+//     }
+//     return true;
+// }
 function validatePassword(p) {
-        errors = [];
-    if (p.length < 8) {
-        errors.push("Your password must be at least 8 characters"); 
-    }
-    if (p.search(/[A-Z]/i) < 0) {
-        errors.push("Your password must contain at least one letter.");
-    }
-    if (p.search(/[a-z]/i) < 0) {
-        errors.push("Your password must contain at least one letter.");
-    }
-    if (p.search(/[0-9]/) < 0) {
-        errors.push("Your password must contain at least one digit."); 
-    }
-    if(p.search(/[!@#$%^&*]/) < 0){
-        errors.push("Your password must contain at least one special character."); 
-    }
-    if (errors.length > 20){
-        alert(errors.join("\n"));
-        return false;
-    }
-    return true;
+	return /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})/.test(
+		email
+	);
 }
 
 
